@@ -82,13 +82,13 @@ if ( $obj = @mysqli_fetch_object($r) )
 <?php
 echo "<td valign=top>";
 echo "<table class='table table-striped'>";
-echo "<tr><td colspan=2><font face=Verdana color=black size=1>dosen</font></td></tr>";
+echo "<tr><td colspan=2><font face=Verdana color=black size=6>Dosen</font></td></tr>";
 echo "<form action=insertdosenexec.php method=post enctype='multipart/form-data'>";
-echo "<tr><td bgcolor=CCCCCC><font face=Verdana color=black size=1>NIDN</font></td>";
+echo "<tr><td bgcolor=#F9D3C5 ><font face=Verdana color=black size=1>NIDN</font></td>";
 echo "<td bgcolor=CCEEEE><input type=text  class='form-control' name='NIDN' size = 100></td>";
-echo "<tr><td bgcolor=CCCCCC><font face=Verdana color=black size=1>Nama</font></td>";
+echo "<tr><td bgcolor=#F9D3C5 ><font face=Verdana color=black size=1>Nama</font></td>";
 echo "<td bgcolor=CCEEEE><input type=text  class='form-control' name='Nama' size = 100></td>";
-echo "<tr><td bgcolor=CCCCCC><font face=Verdana color=black size=1>Foto</font></td>";
+echo "<tr><td bgcolor=#F9D3C5 ><font face=Verdana color=black size=1>Foto</font></td>";
 echo "<div class='form-group'>"; 
 echo "<td bgcolor=CCEEEE><input type='file' class='form-control-file' id='upload_file' name='Foto'></td>"; 
 echo "</div>";

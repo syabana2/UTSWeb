@@ -103,7 +103,7 @@ while($rset = mysqli_fetch_array($hset)){
                     <span class="icon-bar"></span>  
                     <span class="icon-bar"></span>  
                 </button>                      
-                <a class="navbar-brand" href="content.php">SIMUP - <?php echo $Nama;?></a>    
+                <a class="navbar-brand fixed" href="content.php">PROGRAM USULAN PENELITIAN</a>  
             </div>                             
             <!-- /.navbar-header -->      
             <ul class="nav navbar-top-links navbar-right">   

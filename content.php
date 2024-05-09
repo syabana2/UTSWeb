@@ -4,11 +4,6 @@ if(!isset($_SESSION["Email"])){
 header("location:index.php");
 }
 ?>
-<style> 
-    .div-1 {   
-      background-color: #ABBAEA; 
-    } 
-</style> 
 
 <?php  
 include("db.php"); 
@@ -27,11 +22,21 @@ while($rowSetting = mysqli_fetch_array($setting)){
 <div id="page-wrapper">   
  <div class="container-fluid">  
 <?php echo "<br>"; ?> 
- <div class="div-1">  
+ <div class="div-1"> 
+  <style>
+    .div-1 {
+      width : 70%;
+     border:solid black;
+    
+      margin: auto;
+    }
+
+
+  </style> 
 <table> 
    <tr>    
      <td>&nbsp;&nbsp;</td>
-     <td><?php echo "<img src='images/" . $Logo . "' width=110 height=110><br>"; ?></td>
+     <td><?php echo "<img src='images/imagedata.png' width=300 height=220><br>"; ?></td>
      <td>&nbsp;&nbsp;</td>
      <td>
        <?php
@@ -50,9 +55,17 @@ while($rowSetting = mysqli_fetch_array($setting)){
                 <!-- Page Heading --> 
                 <div class="row">   
                     <div class="col-lg-12">  
-                        <h1 class="page-header"> 
-                            Dashboard <small>Statistics Overview</small> 
-                        </h1>            
+                        <h1 class="page-header new"> 
+                            Dashboard <br><br>
+                        
+                        <style>
+
+                          .new{
+                            margin-left: 40%;
+                          }
+                        </style>
+                        <small>Statistics Overview</small> 
+                        </h1>        
                         <ol class="breadcrumb">   
                             <li class="active">  
                                 <i class="fa fa-dashboard"></i> Dashboard    
@@ -79,7 +92,7 @@ while($rowSetting = mysqli_fetch_array($setting)){
           echo $total; 
           ?>  
          </div>  
-         <div>dosen</div>   
+         <div>DOSEN</div>   
        </div>   
       </div>   
      </div>    
@@ -109,7 +122,7 @@ while($rowSetting = mysqli_fetch_array($setting)){
           echo $total; 
           ?>  
          </div>  
-         <div>logtw</div>   
+         <div>LOGTW</div>   
        </div>   
       </div>   
      </div>    
