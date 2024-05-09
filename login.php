@@ -30,9 +30,9 @@
 </head>
 <?php
 //ambil data setting
-$hset = mysqli_query($con ,"select * from setting");
-while($rset = mysqli_fetch_array($hset)){
-	$Logo = $rset["Logo"];
+$hset = mysqli_query($con, "select * from setting");
+while ($rset = mysqli_fetch_array($hset)) {
+    $Logo = $rset["Logo"];
 }
 ?>
 
@@ -43,7 +43,7 @@ while($rset = mysqli_fetch_array($hset)){
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-26">
                         <?php echo "<img src='images/" . $Logo . "' width=100 height=100><br>"; ?>
-                        LOGIN PAGE
+                        LOGINTES
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
