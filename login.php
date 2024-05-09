@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SIMUP</title>
+	<title>SISTEM USULAN PENELITIAN</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -41,7 +41,7 @@ while($rset = mysqli_fetch_array($hset)){
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-26">
            <?php echo "<img src='images/" . $Logo . "' width=100 height=100><br>"; ?>
-						adawdadswa
+						LOGIN PAGE
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
