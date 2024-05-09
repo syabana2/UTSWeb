@@ -31,6 +31,14 @@ while($rowSetting = mysqli_fetch_array($setting)){
       margin: auto;
     }
 
+    .statis {
+      font-family :'MANROPE';
+      text-decoration: under;
+    }
+
+    .hijau {
+      
+    }
 
   </style> 
 <table> 
@@ -56,7 +64,7 @@ while($rowSetting = mysqli_fetch_array($setting)){
                 <div class="row">   
                     <div class="col-lg-12">  
                         <h1 class="page-header new"> 
-                            Dashboard <br><br>
+                    
                         
                         <style>
 
@@ -68,19 +76,19 @@ while($rowSetting = mysqli_fetch_array($setting)){
                         </h1>        
                         <ol class="breadcrumb">   
                             <li class="active">  
-                                <i class="fa fa-dashboard"></i> Dashboard    
+                                <i class="fa fa-dashboard"></i>Dashboard    
                             </li>                   
                         </ol>    
                     </div>          
                </div>  
                    
-<div class="row">  
-<div class="col-lg-3 col-md-6">  
+<div class="row hijau">  
+<div class="col-lg-3 col-md-6 hijau">  
  <div class="panel panel-green">  
    <div class="panel-heading"> 
      <div class="row">       
        <div class="col-xs-3">   
-         <i class="fa fa-tasks fa-5x"></i>  
+         <i class="fa fa-tasks fa-2x"></i>  
        </div>                       
        <div class="col-xs-9 text-right">  
          <div class="huge">       
@@ -92,7 +100,7 @@ while($rowSetting = mysqli_fetch_array($setting)){
           echo $total; 
           ?>  
          </div>  
-         <div>DOSEN</div>   
+         <div class = "statis">DOSEN</div>   
        </div>   
       </div>   
      </div>    

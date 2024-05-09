@@ -24,6 +24,10 @@
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">  
     <!-- Custom Fonts -->          
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->     
     <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->  
     <!--[if lt IE 9]>                                                             
