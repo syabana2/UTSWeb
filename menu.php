@@ -125,7 +125,7 @@ a {
 $q = "SELECT * FROM tw_hak_akses where tabel='dosen' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listdosen.php>dosen</a></li>";
+  echo "<li><a href=listdosen.php>Dosen</a></li>";
 } 
 ?>
 <?php
@@ -133,7 +133,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='mahasiswa' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listmahasiswa.php>mahasiswa</a></li>";
+  echo "<li><a href=listmahasiswa.php>Mahasiswa</a></li>";
 } 
 ?>
 <?php
@@ -141,7 +141,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='program_studi' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listprogram_studi.php>program_studi</a></li>";
+  echo "<li><a href=listprogram_studi.php>Program_Studi</a></li>";
 } 
 ?>
 <?php
@@ -149,7 +149,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='usulan_penelitian' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listusulan_penelitian.php>usulan_penelitian</a></li>";
+  echo "<li><a href=listusulan_penelitian.php>Usulan_Penelitian</a></li>";
 } 
 ?>
             </ul>  
@@ -162,7 +162,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='dosen/usulan_penelitian' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listmasterdosenusulan_penelitian.php>dosen/usulan_penelitian</a></li>";
+  echo "<li><a href=listmasterdosenusulan_penelitian.php>Dosen/Usulan_Penelitian</a></li>";
 } 
 ?>
             </ul>  
@@ -175,7 +175,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='dosen/usulan_penelitian' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=laporan_dosenusulan_penelitian.php>dosen/usulan_penelitian</a></li>";
+  echo "<li><a href=laporan_dosenusulan_penelitian.php>Dosen/Usulan_Penelitian</a></li>";
 } 
 ?>
             </ul> 
@@ -188,7 +188,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='user' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listuser.php>user</a></li>";
+  echo "<li><a href=listuser.php>User</a></li>";
 } 
 ?>
 <?php
@@ -204,7 +204,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='logtw' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listlogtw.php>logtw</a></li>";
+  echo "<li><a href=listlogtw.php>Logtw</a></li>";
 } 
 ?>
 <?php
@@ -212,7 +212,7 @@ if ( $obj = @mysqli_fetch_object($r) ){
 $q = "SELECT * FROM tw_hak_akses where tabel='setting' and user = '". $_SESSION['Email'] ."' and listData='1'"; 
 $r = mysqli_query($con, $q); 
 if ( $obj = @mysqli_fetch_object($r) ){ 
-  echo "<li><a href=listsetting.php>setting</a></li>";
+  echo "<li><a href=listsetting.php>Setting</a></li>";
 } 
 ?>
             </ul>
