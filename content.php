@@ -2,8 +2,6 @@
 session_start();
 if (!isset($_SESSION["Email"])) {
   header("location:index.php");
-if (!isset($_SESSION["Email"])) {
-  header("location:index.php");
 }
 ?>
 
@@ -37,7 +35,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
       </div>
     </div>
 
-    <div class="row">
+    <div class="row hijau">
       <div class="col-lg-3 col-md-6">
         <div class="panel panel-green">
           <div class="panel-heading">
