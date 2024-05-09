@@ -61,7 +61,7 @@ while($rset = mysqli_fetch_array($hset)){
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								<i class="fa fa-sign-in"></i>&nbsp;&nbsp;Login
+								<i class="fa fa-sign-in"></i>&nbsp;&nbsp;Masuk
 							</button>
 						</div>
 					</div>
