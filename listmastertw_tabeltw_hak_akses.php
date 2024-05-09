@@ -21,7 +21,7 @@ if ( $obj = @mysqli_fetch_object($r) )
 echo "<td bgcolor=F5F5F5>";
 ?>
 <?php
-echo "<br><font face=Verdana color=black size=1>tw_tabel</font><br>";
+echo "<br><font face=Verdana color=black size=2>Tw_Tabel</font><br>";
 echo "<br><br><a href=insertmastertw_tabeltw_hak_akses.php><button type='button' class='btn btn-light'><font face=Verdana color=black size=1><i class='fa fa-plus'></i>&nbsp;Insert</font></button></a><br>";
 //cari tabel
 echo "<br><br><form action=listmastertw_tabeltw_hak_akses.php method=post>

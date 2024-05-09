@@ -34,7 +34,7 @@ echo "<td bgcolor=F5F5F5 valign=top>";
 <div id="page-wrapper">  
 <td valign=top>  
 <table class='table table-striped'>
-<tr><td colspan=2><font face=Verdana color=black size=1>Laporan dosen/usulan_penelitian</font></td></tr>
+<tr><td colspan=2><font face=Verdana color=black size=2>Laporan Dosen/Usulan_Penelitian</font></td></tr>
 <form action="laporan_dosenusulan_penelitianexec.php" method="post" target="_blank">     
 <tr><td bgcolor=CCCCCC><font face=Verdana color=black size=1>&nbsp;Tanggal Awal :</font></td> 
 <td bgcolor=CCEEEE><input type=text id='TanggalAwal' name='TanggalAwal' size=10>   

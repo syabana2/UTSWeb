@@ -18,7 +18,7 @@ if ( $obj = @mysqli_fetch_object($r) )
  {
 ?>
 <?php
-echo "<br><font face=Verdana color=black size=1>logtw</font><br><br>";
+echo "<br><font face=Verdana color=black size=2>Logtw</font><br><br>";
 echo "<a href=insertlogtw.php><button type='button' class='btn btn-light'><font face=Verdana color=black size=1><i class='fa fa-plus'></i>&nbsp;Insert</font></button></a>";
 echo "&nbsp;&nbsp;<a href='printlogtw.php' target=_blank><button type='button' class='btn btn-light'><font face=Verdana color=black size=1><i class='fa fa-print'></i>&nbsp;Print</font></button></a>";
 //cari tabel

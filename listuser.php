@@ -21,7 +21,7 @@ if ( $obj = @mysqli_fetch_object($r) )
 echo "<td bgcolor=F5F5F5 align=left valign=top>";
 ?>
 <?php
-echo "<br><br><font face=Verdana color=black size=1>user</font><br><br>";
+echo "<br><br><font face=Verdana color=black size=2>User</font><br><br>";
 echo "<a href=insertuser.php><button type='button' class='btn btn-light'><font face=Verdana color=black size=1><i class='fa fa-plus'></i>&nbsp;Insert</font></button></a><br>";
 //cari tabel
 echo "<br><br><form action=listuser.php method=post>
