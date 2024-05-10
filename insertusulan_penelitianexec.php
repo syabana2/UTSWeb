@@ -19,7 +19,7 @@ if (isset($id) && isset($NIM) && isset($Pembimbing) && isset($Penguji1) && isset
 mysqli_query($con, "INSERT INTO usulan_penelitian(id,NIM,Pembimbing,Penguji1,Penguji2,Tanggal,Ruang) VALUES (null,'$NIM','$Pembimbing','$Penguji1','$Penguji2','$Tanggal','$Ruang')");
 }
 
-tulislog("insert into usulan_penelitian", $con); 
+tulislog("insert into usulan_penelitian", $con);
 header("Location: listusulan_penelitian.php");
 mysqli_close($con)
 ?>

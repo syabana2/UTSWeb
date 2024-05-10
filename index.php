@@ -10,9 +10,9 @@
 
 <body topmargin=0 leftmargin=0 marginwidth=0 marginheight=0 bgcolor=FFFFFF>
     <?php
-include("db.php");
-include("login.php");
-?>
+    include("db.php");
+    include("login.php");
+    ?>
 </body>
 
 </html>

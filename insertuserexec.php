@@ -19,7 +19,7 @@ $result = mysqli_query($con, "select * from tw_tabel");
 while($row = mysqli_fetch_array($result)){
  mysqli_query($con, "insert into tw_hak_akses values (null,'$row[0]','$Email','0','0','0','0','0','0')");
 }
- tulislog("insert into user", $con); 
+ tulislog("insert into user", $con);
 header("Location: listuser.php");
 mysqli_close($con)
 ?>

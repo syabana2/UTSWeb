@@ -30,9 +30,9 @@
 </head>
 <?php
 //ambil data setting
-$hset = mysqli_query($con ,"select * from setting");
-while($rset = mysqli_fetch_array($hset)){
-	$Logo = $rset["Logo"];
+$hset = mysqli_query($con, "select * from setting");
+while ($rset = mysqli_fetch_array($hset)) {
+    $Logo = $rset["Logo"];
 }
 ?>
 
@@ -78,21 +78,17 @@ while($rset = mysqli_fetch_array($hset)){
                 </form>
             </div>
 
-            
+
         </div>
         <div class="rotatorbox p-l-55 p-r-55 p-t-60 p-b-30"></div>
-        
+
 
         <style>
-
-
             .logoh {
-                padding-right : 150px;
+                padding-right: 150px;
                 height: auto;
                 width: 150%;
             }
-            
-
         </style>
 
         <div id="dropDownSelect1"></div>

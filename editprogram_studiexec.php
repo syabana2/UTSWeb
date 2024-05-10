@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION["Email"])){
-header("location:index.php");
+if (!isset($_SESSION["Email"])) {
+  header("location:index.php");
 }
 ?>
 <?php
@@ -14,7 +14,7 @@ $Kaprodi = mysqli_real_escape_string($con, $_POST["Kaprodi"]);
 $NIDN_Kaprodi = mysqli_real_escape_string($con, $_POST["NIDN_Kaprodi"]);
 
 mysqli_query($con, "update program_studi set Kode='$Kode', Program_Studi='$Program_Studi', Kaprodi='$Kaprodi', NIDN_Kaprodi='$NIDN_Kaprodi' where Kode='$pk'");
- tulislog("update program_studi", $con); 
+tulislog("update program_studi", $con);
 header("Location: listprogram_studi.php");
 mysqli_close($con);
 ?>

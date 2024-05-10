@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION["Email"])){
-header("location:index.php");
+if (!isset($_SESSION["Email"])) {
+  header("location:index.php");
 }
 ?>
 <?php
@@ -19,7 +19,7 @@ $deleteData = mysqli_real_escape_string($con, $_POST["deleteData"]);
 $detailData = mysqli_real_escape_string($con, $_POST["detailData"]);
 
 mysqli_query($con, "update tw_hak_akses set id='$id', tabel='$tabel', user='$user', listData='$listData', viewData='$viewData', insertData='$insertData', editData='$editData', deleteData='$deleteData', detailData='$detailData' where id=$pk");
- tulislog("update tw_hak_akses", $con); 
+tulislog("update tw_hak_akses", $con);
 header("Location: listtw_hak_akses.php");
 mysqli_close($con);
 ?>

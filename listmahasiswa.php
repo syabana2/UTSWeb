@@ -4,11 +4,11 @@ if(!isset($_SESSION["Email"])){
 header("location:index.php");
 }
 ?>
-<?php     
-include("db.php");  
-include("header.php"); 
-include("menu.php"); 
-?>      
+<?php
+include("db.php");
+include("header.php");
+include("menu.php");
+?>
 <div id="page-wrapper">
 <?php
 //cek otoritas
@@ -27,7 +27,7 @@ echo "<br><br><form action=listmahasiswa.php method=post>
 $menu=mysqli_query($con, "show columns from mahasiswa");
 while($rowmenu = mysqli_fetch_array($menu))
 {
-    echo "<option value=". $rowmenu[Field] .">". $rowmenu[Field]."</option>";
+    echo "<option value=". $rowmenu['Field'] .">". $rowmenu['Field']."</option>";
 }
 echo "    </select>
 <input type=text  class='form-control' name=cari>
@@ -41,10 +41,10 @@ $resultcari = mysqli_query($con, $dd);
 if ( $obj = mysqli_fetch_object($resultcari) )
 {
 $result = mysqli_query($con, $dd);
-echo "<font face=Verdana color=black size=1>Hasil Pencarian</font>"; 
-echo "<div class='table-responsive'> "; 
-echo "<table class='table table-striped'> 
-<tr bgcolor=D3DCE3> 
+echo "<font face=Verdana color=black size=1>Hasil Pencarian</font>";
+echo "<div class='table-responsive'> ";
+echo "<table class='table table-striped'>
+<tr bgcolor=D3DCE3>
 <th></th>
 <th></th>
 <th></th>
@@ -69,10 +69,10 @@ while($row = mysqli_fetch_array($result))
   echo "<td><font face=Verdana color=black size=1>" . $row['NIM'] . "</font></td>";
   echo "<td><font face=Verdana color=black size=1>" . $row['Nama'] . "</font></td>";
   echo "<td><font face=Verdana color=black size=1>" . $row['Program_Studi'] . "<br>";
-  $l = mysqli_query($con, "select Program_Studi from program_studi where Kode = '". $row['Program_Studi'] ."'"); 
-  while($rl = mysqli_fetch_array($l)){  
-    echo $rl[0];    
-  } 
+  $l = mysqli_query($con, "select Program_Studi from program_studi where Kode = '". $row['Program_Studi'] ."'");
+  while($rl = mysqli_fetch_array($l)){
+    echo $rl[0];
+  }
   echo "</font></td>";
   echo "<td><font face=Verdana color=black size=1><a href='images/" . $row['Foto'] . "' target=_blank><img src='images/" . $row['Foto'] . "' width=50 height=50></a></font></td>";
   echo "</tr>";
@@ -95,8 +95,8 @@ else{
 	$posisi = ($halaman-1) * $batas;
 }
 $result = mysqli_query($con, "SELECT * FROM mahasiswa LIMIT $posisi,$batas");
-echo "<div class='table-responsive'> "; 
-echo "<table class='table table-striped'>"; 
+echo "<div class='table-responsive'> ";
+echo "<table class='table table-striped'>";
 $firstColumn = 1;
 $warna = 0;
 while($row = mysqli_fetch_array($result))
@@ -126,10 +126,10 @@ $firstColumn = 0;
   echo "<td><font face=Verdana color=black size=1>" . $row['NIM'] . "</font></td>";
   echo "<td><font face=Verdana color=black size=1>" . $row['Nama'] . "</font></td>";
   echo "<td><font face=Verdana color=black size=1>" . $row['Program_Studi'] . "<br>";
-  $l = mysqli_query($con, "select Program_Studi from program_studi where Kode = '". $row['Program_Studi'] ."'"); 
-  while($rl = mysqli_fetch_array($l)){  
-    echo $rl[0];    
-  } 
+  $l = mysqli_query($con, "select Program_Studi from program_studi where Kode = '". $row['Program_Studi'] ."'");
+  while($rl = mysqli_fetch_array($l)){
+    echo $rl[0];
+  }
   echo "</font></td>";
   echo "<td><font face=Verdana color=black size=1><a href='images/" . $row['Foto'] . "' target=_blank><img src='images/" . $row['Foto'] . "' width=50 height=50></a></font></td>";
   echo "</tr>";
@@ -170,9 +170,9 @@ echo "<p align=center><font face=Verdana color=black size=1><b>$jmldata</b> data
 mysqli_close($con);
 echo "</td></tr>";
 }
- ?>   
- </div> 
- <?php 
+ ?>
+ </div>
+ <?php
 include("footer.php");
 ?>
 <?php

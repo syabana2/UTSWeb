@@ -27,7 +27,7 @@ echo "<br><br><form action=listtw_hak_akses.php method=post>
 $menu=mysqli_query($con, "show columns from tw_hak_akses");
 while($rowmenu = mysqli_fetch_array($menu))
 {
-    echo "<option value=". $rowmenu[Field] .">". $rowmenu[Field]."</option>";
+    echo "<option value=". $rowmenu['Field'] .">". $rowmenu['Field']."</option>";
 }
 echo "    </select>
 <input type=text  class='form-control' name=cari>

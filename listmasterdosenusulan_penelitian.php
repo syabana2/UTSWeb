@@ -26,7 +26,7 @@ echo "<br><form action=listmasterdosenusulan_penelitian.php method=post>
 $menu=mysqli_query($con, "show columns from dosen");
 while($rowmenu = mysqli_fetch_array($menu))
 {
-    echo "<option value=". $rowmenu[Field] .">". $rowmenu[Field]."</option>";
+    echo "<option value=". $rowmenu['Field'] .">". $rowmenu['Field']."</option>";
 }
 echo "    </select>
 <input type=text  class='form-control' name=cari>

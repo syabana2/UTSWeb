@@ -27,7 +27,7 @@ echo "<br><br><form action=listtw_tabel.php method=post>
 $menu=mysqli_query($con, "show columns from tw_tabel");
 while($rowmenu = mysqli_fetch_array($menu))
 {
-    echo "<option value=". $rowmenu[Field] .">". $rowmenu[Field]."</option>";
+    echo "<option value=". $rowmenu['Field'] .">". $rowmenu['Field']."</option>";
 }
 echo "    </select>
 <input type=text  class='form-control' name=cari>

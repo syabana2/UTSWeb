@@ -4,11 +4,11 @@ if(!isset($_SESSION["Email"])){
 header("location:index.php");
 }
 ?>
-<?php     
-include("db.php");  
-include("header.php"); 
-include("menu.php"); 
-?>      
+<?php
+include("db.php");
+include("header.php");
+include("menu.php");
+?>
 <div id="page-wrapper">
 <?php
 //cek otoritas
@@ -27,7 +27,7 @@ echo "<br><br><form action=listprogram_studi.php method=post>
 $menu=mysqli_query($con, "show columns from program_studi");
 while($rowmenu = mysqli_fetch_array($menu))
 {
-    echo "<option value=". $rowmenu[Field] .">". $rowmenu[Field]."</option>";
+    echo "<option value=". $rowmenu['Field'] .">". $rowmenu['Field']."</option>";
 }
 echo "    </select>
 <input type=text  class='form-control' name=cari>
@@ -41,10 +41,10 @@ $resultcari = mysqli_query($con, $dd);
 if ( $obj = mysqli_fetch_object($resultcari) )
 {
 $result = mysqli_query($con, $dd);
-echo "<font face=Verdana color=black size=1>Hasil Pencarian</font>"; 
-echo "<div class='table-responsive'> "; 
-echo "<table class='table table-striped'> 
-<tr bgcolor=D3DCE3> 
+echo "<font face=Verdana color=black size=1>Hasil Pencarian</font>";
+echo "<div class='table-responsive'> ";
+echo "<table class='table table-striped'>
+<tr bgcolor=D3DCE3>
 <th></th>
 <th></th>
 <th></th>
@@ -90,8 +90,8 @@ else{
 	$posisi = ($halaman-1) * $batas;
 }
 $result = mysqli_query($con, "SELECT * FROM program_studi LIMIT $posisi,$batas");
-echo "<div class='table-responsive'> "; 
-echo "<table class='table table-striped'>"; 
+echo "<div class='table-responsive'> ";
+echo "<table class='table table-striped'>";
 $firstColumn = 1;
 $warna = 0;
 while($row = mysqli_fetch_array($result))
@@ -160,9 +160,9 @@ echo "<p align=center><font face=Verdana color=black size=1><b>$jmldata</b> data
 mysqli_close($con);
 echo "</td></tr>";
 }
- ?>   
- </div> 
- <?php 
+ ?>
+ </div>
+ <?php
 include("footer.php");
 ?>
 <?php

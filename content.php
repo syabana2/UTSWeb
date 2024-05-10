@@ -22,11 +22,12 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
 <div id="page-wrapper">
   <div class="container-fluid">
     <?php echo "<br>"; ?>
+    <?php echo "<br>"; ?>
+    <?php echo "<br>"; ?>
 
     <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header new">Dashboard</h1>
         <ol class="breadcrumb">
           <li class="active">
             <i class="fa fa-dashboard"></i> Dashboard
@@ -41,7 +42,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
           <div class="panel-heading">
             <div class="row">
               <div class="col-xs-3">
-                <i class="fa fa-tasks fa-2x"></i>
+                <i class="fa fa-tasks fa-5x"></i>
               </div>
               <div class="col-xs-9 text-right">
                 <div class="huge">
@@ -53,7 +54,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div class="statis">DOSEN</div>
+                <div class="statis">dosen</div>
               </div>
             </div>
           </div>
@@ -83,7 +84,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div>LOGTW</div>
+                <div>logtw</div>
               </div>
             </div>
           </div>

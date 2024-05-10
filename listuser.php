@@ -29,9 +29,9 @@ echo "<br><br><form action=listuser.php method=post>
 $menu=mysqli_query($con, "show columns from user");
 while($rowmenu = mysqli_fetch_array($menu))
 {
-   if ($rowmenu[Field] == 'Password') {
+   if ($rowmenu['Field'] == 'Password') {
    } else {
-    echo "<option value=". $rowmenu[Field] .">". $rowmenu[Field]."</option>";
+    echo "<option value=". $rowmenu['Field'] .">". $rowmenu['Field']."</option>";
    }
 }
 echo "    </select>

@@ -13,7 +13,7 @@ if (isset($tabel)){
 mysqli_query($con, "INSERT INTO tw_tabel(tabel) VALUES ('$tabel')");
 }
 
-tulislog("insert into tw_tabel", $con); 
+tulislog("insert into tw_tabel", $con);
 header("Location: listtw_tabel.php");
 mysqli_close($con)
 ?>

@@ -73,6 +73,13 @@ new Chart("myChart", {
     title: {
       display: true,
       text: "Jumlah Data"
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
     }
   }
 });

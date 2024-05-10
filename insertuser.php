@@ -4,12 +4,12 @@ if(!isset($_SESSION["Email"])){
 header("location:index.php");
 }
 ?>
- <?php   
+ <?php
 include("db.php");
-include("header.php");   
-include("menu.php");  
-?>   
-<div id="page-wrapper">  
+include("header.php");
+include("menu.php");
+?>
+<div id="page-wrapper">
 <?php
 //cek otoritas
 $q = "SELECT * FROM tw_hak_akses where tabel='user' and user = '". $_SESSION['Email'] ."' and insertData='1'";
@@ -35,9 +35,9 @@ echo "</td>";
 echo "<tr><td colspan=2 align=center><button type=submit><font face=Verdana size=1>&nbsp;Insert&nbsp;</font></button></td></tr>";
 echo "</form>";
 echo "</table>";
- ?> 
- </div> 
- <?php 
+ ?>
+ </div>
+ <?php
 include("footer.php");
 ?>
 <?php

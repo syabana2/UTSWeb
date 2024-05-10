@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION["Email"])){
-header("location:index.php");
+if (!isset($_SESSION["Email"])) {
+  header("location:index.php");
 }
 ?>
 <?php
@@ -17,7 +17,7 @@ $Tanggal = mysqli_real_escape_string($con, $_POST["Tanggal"]);
 $Ruang = mysqli_real_escape_string($con, $_POST["Ruang"]);
 
 mysqli_query($con, "update usulan_penelitian set id='$id', NIM='$NIM', Pembimbing='$Pembimbing', Penguji1='$Penguji1', Penguji2='$Penguji2', Tanggal='$Tanggal', Ruang='$Ruang' where id=$pk");
- tulislog("update usulan_penelitian", $con); 
+tulislog("update usulan_penelitian", $con);
 header("Location: listusulan_penelitian.php");
 mysqli_close($con);
 ?>
