@@ -1,3 +1,7 @@
+<HEAD>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</HEAD>
 <style>
     * {
         margin: 0;
@@ -105,6 +109,11 @@
         background: #C7C8CC;
         color: #FFF
     }
+    
+    .all {
+        font-family: poppins;
+
+    }
 </style>
 
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
@@ -116,11 +125,11 @@
         <ul id="accordion" class="accordion">
             <li>
                 <a href="content.php">
-                    <div class="link"><i class="fa fa-dashboard"></i>Dashboard</div>
+                    <div class="link"><i class="fa fa-dashboard"></i><span class = "all">DASHBOARD</span></div>
                 </a>
             </li>
             <li>
-                <div class="link"><i class="fa fa-tasks"></i>Master<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-tasks"></i><span class = "all">MASTER</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
@@ -157,7 +166,7 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-edit"></i>Transaksi<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-edit"></i><span class = "all">TRANSAKSI</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
@@ -170,7 +179,7 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-file"></i>Laporan<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-file"></i><span class ="all">LAPORAN</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
@@ -183,7 +192,7 @@
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-gear"></i>Setting<i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-gear"></i><span class ="all">SETTING</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
@@ -221,7 +230,7 @@
             </li>
             <li>
                 <a href=logout.php onclick="return confirm('Are you sure?')">
-                    <div class="link"><i class="fa fa-sign-out"></i>Logout</div>
+                    <div class="link"><i class="fa fa-sign-out"></i><span class ="all">Logout</span></div>
                 </a>
             </li>
         </ul>

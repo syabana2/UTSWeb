@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="tag.css">
     <script type="text/javascript" src="tag.js"></script>
     <script type="text/javascript" src="kalender/calendar.js"></script>
+    
     <link href="kalender/calendar.css" rel="stylesheet" type="text/css" media="screen">
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +25,9 @@
     <!-- Morris Charts CSS -->
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
@@ -106,7 +110,7 @@ while ($rset = mysqli_fetch_array($hset)) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand fixed" href="content.php">APLIKASI PENDATAAN USULAN PENELITIAN</a>
+                <a class="navbar-brand fixed" href="content.php"><span class = "nov">APLIKASI PENDATAAN USULAN PENELITIAN</span></a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -129,3 +133,11 @@ while ($rset = mysqli_fetch_array($hset)) {
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
+
+            <style>
+                .nov{
+                    color:black;
+                    font-family: poppins;
+                    font-size: 20px;
+                }   
+            </style>
