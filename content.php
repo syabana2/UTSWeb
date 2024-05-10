@@ -33,10 +33,10 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
 
     <!-- Page Heading -->
     
-             <h1 class = "contenthead">DASHBOARD</h1>
+             <h1 class = "contenthead slide-in-from-left">DASHBOARD</h1>
          
 
-    <div class="row hijau">
+    <div class="row hijau slide-in-from-left">
       <div class="col-lg-3 col-md-6">
         <div class="panel panel-green panel-hover">
           <div class="panel-heading">
@@ -280,7 +280,20 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
   transition: transform 0.3s ease;
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+.slide-in-from-left {
+    animation: slideInFromLeft 1s ease forwards;
+}
 
 
       </style>

@@ -102,7 +102,7 @@ while ($rset = mysqli_fetch_array($hset)) {
 <body>
     <div id="wrapper">
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-fixed-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -110,7 +110,7 @@ while ($rset = mysqli_fetch_array($hset)) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand fixed" href="content.php"><span class = "nov">APLIKASI PENDATAAN USULAN PENELITIAN</span></a>
+                <a class="navbar-brand fixed slide-in-from-left" href="content.php"><span class = "nov">APLIKASI PENDATAAN USULAN PENELITIAN</span></a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -136,8 +136,64 @@ while ($rset = mysqli_fetch_array($hset)) {
 
             <style>
                 .nov{
-                    color:black;
+                    color:white;
                     font-family: poppins;
                     font-size: 20px;
                 }   
+                .navbar-default {
+    background-color:  #181A18 ;
+    border-color: #080808;
+}
+
+.navbar-default .navbar-brand {
+    color: white; 
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #080808; 
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #080808;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white; 
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white; 
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    background-color: #080808; 
+    color: white; 
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-from-left {
+    animation: slideInFromLeft 1s ease forwards;
+}
             </style>

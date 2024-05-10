@@ -114,6 +114,20 @@
         font-family: poppins;
 
     }
+    @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-from-left {
+    animation: slideInFromLeft 1s ease forwards;
+}
 </style>
 
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
@@ -125,11 +139,11 @@
         <ul id="accordion" class="accordion">
             <li>
                 <a href="content.php">
-                    <div class="link"><i class="fa fa-dashboard"></i><span class = "all">DASHBOARD</span></div>
+                    <div class="link"><i class="fa fa-dashboard"></i><span class = "all slide-in-from-left">DASHBOARD</span></div>
                 </a>
             </li>
             <li>
-                <div class="link"><i class="fa fa-tasks"></i><span class = "all">MASTER</span><i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-tasks"></i><span class = "all slide-in-from-left">MASTER</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
@@ -152,7 +166,7 @@
                     $q = "SELECT * FROM tw_hak_akses where tabel='program_studi' and user = '" . $_SESSION['Email'] . "' and listData='1'";
                     $r = mysqli_query($con, $q);
                     if ($obj = @mysqli_fetch_object($r)) {
-                        echo "<li><a href=listprogram_studi.php>Program_Studi</a></li>";
+                        echo "<li><a href=listprogram_studi.php>Program Studi</a></li>";
                     }
                     ?>
                     <?php
@@ -160,39 +174,39 @@
                     $q = "SELECT * FROM tw_hak_akses where tabel='usulan_penelitian' and user = '" . $_SESSION['Email'] . "' and listData='1'";
                     $r = mysqli_query($con, $q);
                     if ($obj = @mysqli_fetch_object($r)) {
-                        echo "<li><a href=listusulan_penelitian.php>Usulan_Penelitian</a></li>";
+                        echo "<li><a href=listusulan_penelitian.php>Usulan Penelitian</a></li>";
                     }
                     ?>
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-edit"></i><span class = "all">TRANSAKSI</span><i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-edit"></i><span class = "all slide-in-from-left">TRANSAKSI</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
                     $q = "SELECT * FROM tw_hak_akses where tabel='dosen/usulan_penelitian' and user = '" . $_SESSION['Email'] . "' and listData='1'";
                     $r = mysqli_query($con, $q);
                     if ($obj = @mysqli_fetch_object($r)) {
-                        echo "<li><a href=listmasterdosenusulan_penelitian.php>Dosen/Usulan_Penelitian</a></li>";
+                        echo "<li><a href=listmasterdosenusulan_penelitian.php>Dosen / Usulan Penelitian</a></li>";
                     }
                     ?>
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-file"></i><span class ="all">LAPORAN</span><i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-file"></i><span class ="all slide-in-from-left">LAPORAN</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
                     $q = "SELECT * FROM tw_hak_akses where tabel='dosen/usulan_penelitian' and user = '" . $_SESSION['Email'] . "' and listData='1'";
                     $r = mysqli_query($con, $q);
                     if ($obj = @mysqli_fetch_object($r)) {
-                        echo "<li><a href=laporan_dosenusulan_penelitian.php>Dosen/Usulan_Penelitian</a></li>";
+                        echo "<li><a href=laporan_dosenusulan_penelitian.php>Dosen/Usulan Penelitian</a></li>";
                     }
                     ?>
                 </ul>
             </li>
             <li>
-                <div class="link"><i class="fa fa-gear"></i><span class ="all">SETTING</span><i class="fa fa-chevron-down"></i></div>
+                <div class="link"><i class="fa fa-gear"></i><span class ="all slide-in-from-left">SETTING</span><i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
                     <?php
                     //cek otoritas
@@ -230,7 +244,7 @@
             </li>
             <li>
                 <a href=logout.php onclick="return confirm('Are you sure?')">
-                    <div class="link"><i class="fa fa-sign-out"></i><span class ="all">Logout</span></div>
+                    <div class="link"><i class="fa fa-sign-out"></i><span class ="all slide-in-from-left">LOGOUT</span></div>
                 </a>
             </li>
         </ul>
