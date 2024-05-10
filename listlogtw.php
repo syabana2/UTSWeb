@@ -79,8 +79,9 @@ include("menu.php");
       }
     }
     if ((!isset($_POST["cari"])) or ($_POST["cari"] == "")) {
-      // Langkah 1: Tentukan batas,cek halaman & posisi data
-      $batas   = 100;
+      $batasDefault = 20;
+
+      $batas   = $batasDefault;
       if (isset($_GET["halaman"])) {
         $halaman = $_GET['halaman'];
       }
@@ -128,26 +129,26 @@ include("menu.php");
       }
       echo "</table><br>";
       echo "</div>";
-      //Langkah 3: Hitung total data dan halaman
+
       $tampil2 = mysqli_query($con, "SELECT * FROM logtw ORDER BY Time Desc");
       $jmldata = mysqli_num_rows($tampil2);
       $jmlhal  = ceil($jmldata / $batas);
       echo "<div class=paging>";
-      // Link ke halaman sebelumnya (previous)
+
       if ($halaman > 1) {
         $prev = $halaman - 1;
         echo "<span class=prevnext><a href=$_SERVER[PHP_SELF]?halaman=$prev><font face=Verdana color=black size=1><< Prev</font></a></span> ";
       } else {
         echo "<span class=disabled><font face=Verdana color=black size=1><< Prev</font></span> ";
       }
-      // Tampilkan link halaman 1,2,3 ...
+
       for ($i = 1; $i <= $jmlhal; $i++)
         if ($i != $halaman) {
           echo " <a href=$_SERVER[PHP_SELF]?halaman=$i><font face=Verdana color=black size=1>$i</font></a> ";
         } else {
           echo " <span class=current><font face=Verdana color=black size=1>$i</font></span> ";
         }
-      // Link kehalaman berikutnya (Next)
+
       if ($halaman < $jmlhal) {
         $next = $halaman + 1;
         echo "<span class=prevnext><a href=$_SERVER[PHP_SELF]?halaman=$next><font face=Verdana color=black size=1>Next >></font></a></span>";
