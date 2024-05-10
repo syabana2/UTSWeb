@@ -35,7 +35,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
     
              <h1 class = "contenthead slide-in-from-left">DASHBOARD</h1>
          
-
+<style></style>
     <div class="row hijau slide-in-from-left">
       <div class="col-lg-3 col-md-6">
         <div class="panel panel-green panel-hover">

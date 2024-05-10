@@ -28,7 +28,7 @@
         width: 100%;
         max-width: 300px;
         margin: 0px auto 0px;
-        background: #F8F8F8;
+        background: 1A181A
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 5px
@@ -112,6 +112,7 @@
     
     .all {
         font-family: poppins;
+        color :white;
 
     }
     @keyframes slideInFromLeft {

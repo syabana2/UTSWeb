@@ -100,6 +100,11 @@ while ($rset = mysqli_fetch_array($hset)) {
 ?>
 
 <body>
+    <style>
+        body{
+            background-color: 1A181A;
+        }
+    </style>
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top " role="navigation" style="margin-bottom: 0">
