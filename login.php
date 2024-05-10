@@ -43,7 +43,7 @@ while ($rset = mysqli_fetch_array($hset)) {
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-26">
                         <?php echo "<img class = 'logoh' src='images/imagedata.png' width=100 height=100><br>"; ?>
-                        LOGIN PAGE
+                        LOGIN
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">

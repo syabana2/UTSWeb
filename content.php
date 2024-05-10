@@ -54,7 +54,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div class="statis">dosen</div>
+                <div class="statis">Dosen</div>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div>logtw</div>
+                <div>Logtw</div>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div>mahasiswa</div>
+                <div>Mahasiswa</div>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div>program_studi</div>
+                <div>Program_Studi</div>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div>setting</div>
+                <div>Setting</div>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
                   echo $total;
                   ?>
                 </div>
-                <div>usulan_penelitian</div>
+                <div>Usulan_Penelitian</div>
               </div>
             </div>
           </div>
