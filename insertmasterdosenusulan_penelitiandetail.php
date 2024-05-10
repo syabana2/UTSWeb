@@ -92,7 +92,8 @@ include("menu.php");
 	echo "<select class='form-control' name='Pembimbing'>";
 	$result = mysqli_query($con, "select * from dosen");
 	while ($r = mysqli_fetch_array($result)) {
-		echo "<option value='" . $r['NIDN'] . "'>" . $r['NIDN'] . " | " . $r['Nama'] . "</option>";
+    $selected = ($r['NIDN'] == $_GET['NIDN']) ? 'selected' : '';
+    echo "<option value='" . $r['NIDN'] . "' $selected>" . $r['NIDN'] . " | " . $r['Nama'] . "</option>";
 	}
 	echo "</select>";
 	echo "</td></tr>";

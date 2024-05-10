@@ -13,7 +13,6 @@ include("menu.php");
 	<?php
 	//cek otoritas
 	$q = "SELECT * FROM tw_hak_akses where tabel='dosen/usulan_penelitian' and user = '" . $_SESSION['Email'] . "' and insertData='1'";
-	print_r($q);
 	$r = mysqli_query($con, $q);
 	if ($obj = @mysqli_fetch_object($r)) {
 	?>

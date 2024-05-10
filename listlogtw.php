@@ -36,7 +36,7 @@ include("menu.php");
     }
     if (isset($_POST["cari"]) && ($_POST["cari"] != "")) {
       //hasil pencarian tabel
-      $dd = "SELECT * FROM logtw where " . $_POST["select"] . " like '%" . $cari . "%'";
+      $dd = "SELECT * FROM logtw where " . $_POST["select"] . " like '%" . $cari . "%' ORDER BY Time Desc";
       $resultcari = mysqli_query($con, $dd);
       if ($obj = mysqli_fetch_object($resultcari)) {
         $result = mysqli_query($con, $dd);
@@ -90,7 +90,7 @@ include("menu.php");
       } else {
         $posisi = ($halaman - 1) * $batas;
       }
-      $result = mysqli_query($con, "SELECT * FROM logtw LIMIT $posisi,$batas");
+      $result = mysqli_query($con, "SELECT * FROM logtw ORDER BY Time Desc LIMIT $posisi,$batas");
       echo "<div class='table-responsive'> ";
       echo "<table class='table table-striped'>";
       $firstColumn = 1;
@@ -129,7 +129,7 @@ include("menu.php");
       echo "</table><br>";
       echo "</div>";
       //Langkah 3: Hitung total data dan halaman
-      $tampil2 = mysqli_query($con, "SELECT * FROM logtw");
+      $tampil2 = mysqli_query($con, "SELECT * FROM logtw ORDER BY Time Desc");
       $jmldata = mysqli_num_rows($tampil2);
       $jmlhal  = ceil($jmldata / $batas);
       echo "<div class=paging>";

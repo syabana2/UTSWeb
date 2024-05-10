@@ -90,19 +90,15 @@ include("menu.php");
         echo "<tr><td bgcolor=CCCCCC><font face=Verdana color=black size=1>Program_Studi</font></td>";
         echo "<td bgcolor=CCEEEE>";
         echo "<select class='form-control' name='Program_Studi'>";
-        // Menambahkan opsi untuk setiap program studi yang diinginkan
-        $program_studi = array(
-            "TI" => "Teknik Informatika",
-            "TE" => "Teknik Elektro",
-            "TM" => "Teknik Mesin",
-            "TS" => "Teknik Sipil",
-            "ARS" => "Arsitektur",
-            "BI" => "Bahasa Indonesia",
-            "SI" => "Sistem Informasi",
-            "HUK" => "Hukum",
-            "MAN" => "Manajemen",
-            "AK" => "Akuntansi"
-        );
+
+        $query_program_studi = "SELECT Kode, Program_Studi FROM program_studi";
+        $result_program_studi = mysqli_query($con, $query_program_studi);
+        $program_studi = array();
+
+        while ($row = mysqli_fetch_assoc($result_program_studi)) {
+            $program_studi[$row['Kode']] = $row['Program_Studi'];
+        }
+
         foreach ($program_studi as $kode => $nama) {
             echo "<option value='$kode'>$nama</option>";
         }

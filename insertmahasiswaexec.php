@@ -27,7 +27,27 @@ if (isset($_POST['send_image'])) {
 			if ($ukuran_file <= $ukuran_maks_file) {
 				$namaBaruFile = md5($nama_file_tanpa_ekstensi[0] . microtime()) . '.' . $ekstensi_file;
 				if (move_uploaded_file($file['tmp_name'], $folder . $namaBaruFile)) {
-					echo "sukses upload file";
+
+					$Foto = $namaBaruFile;
+					if (isset($NIM) && isset($Nama) && isset($Program_Studi) && isset($Foto)) {
+						try {
+							mysqli_query($con, "INSERT INTO mahasiswa(NIM,Nama,Program_Studi,Foto) VALUES ('$NIM','$Nama','$Program_Studi','$Foto')");
+							tulislog("insert into mahasiswa", $con);
+							header("Location: listmahasiswa.php");
+
+						} catch (Exception $e) {
+							echo "error: " . $e->getMessage();
+							unlink($folder . $namaBaruFile);
+							tulislog("error: insert into mahasiswa | " . $e->getMessage(), $con);
+						}
+
+						mysqli_close($con);
+
+					} else {
+						echo "error: semua data mahasiswa harus diisi";
+						tulislog("error: insert into mahasiswa", $con);
+					}
+
 				} else {
 					echo "Error: can not upload image";
 				}
@@ -39,12 +59,5 @@ if (isset($_POST['send_image'])) {
 		}
 	}
 }
-$Foto = $namaBaruFile;
-if (isset($NIM) && isset($Nama) && isset($Program_Studi) && isset($Foto)) {
-	mysqli_query($con, "INSERT INTO mahasiswa(NIM,Nama,Program_Studi,Foto) VALUES ('$NIM','$Nama','$Program_Studi','$Foto')");
-}
 
-tulislog("insert into mahasiswa", $con);
-header("Location: listmahasiswa.php");
-mysqli_close($con)
 ?>
