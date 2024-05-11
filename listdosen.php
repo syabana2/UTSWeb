@@ -1,4 +1,14 @@
+<head>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    </head>
+<style>
+  .all {
+    font-family : 'poppins';
+  }
+</style>
 <?php
 session_start();
 if(!isset($_SESSION["Email"])){
@@ -22,7 +32,7 @@ if ( $obj = @mysqli_fetch_object($r) )
  {
 ?>
 <?php
-echo "<br><font face=Verdana color=black size=2>Dosen</font><br><br>";
+echo "<br><font all>Dosen</font><br><br>";
 echo "<a href=insertdosen.php><button type='button' class='btn btn-light'><font face=Verdana color=black size=1><i class='fa fa-plus'></i>&nbsp;Insert</font></button></a>";
 echo "&nbsp;&nbsp;<a href='printdosen.php' target=_blank><button type='button' class='btn btn-light'><font face=Verdana color=black size=1><i class='fa fa-print'></i>&nbsp;Print</font></button></a>";
 //cari tabel

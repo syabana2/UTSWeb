@@ -1,4 +1,4 @@
-<link href="page1.css" rel="stylesheet" type="text/css">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,215 +9,177 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>SIMUP</title>
-    <link rel="stylesheet" type="text/css" href="tag.css">
-    <script type="text/javascript" src="tag.js"></script>
-    <script type="text/javascript" src="kalender/calendar.js"></script>
-    
-    <link href="kalender/calendar.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="page1.css">
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- MetisMenu CSS -->
-    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-    <!-- Timeline CSS -->
-    <link href="dist/css/timeline.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="dist/css/sb-admin-2.css" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <link href="standar.css" rel="stylesheet" type="text/css">
     <!-- calendar -->
-    <script src="php_calendar/scripts.js" type="text/javascript"></script>
-    <!-- TinyMCE -->
-    <script type="text/javascript" src="tiny_mce/tiny_mce.js"></script>
-    <script type="text/javascript">
-        tinyMCE.init({
-            mode: "textareas",
-            theme: "advanced",
-            plugins: "youtube,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,zoom,flash,searchreplace,print,paste,directionality,fullscreen,noneditable,contextmenu",
-            theme_advanced_buttons1_add_before: "save,newdocument,separator",
-            theme_advanced_buttons1_add: "fontselect,fontsizeselect",
-            theme_advanced_buttons2_add: "separator,insertdate,inserttime,preview,zoom,separator,forecolor,backcolor,liststyle",
-            theme_advanced_buttons2_add_before: "cut,copy,paste,pastetext,pasteword,separator,search,replace,separator",
-            theme_advanced_buttons3_add_before: "tablecontrols,separator,youtube,separator",
-            theme_advanced_buttons3_add: "emotions,iespell,flash,advhr,separator,print,separator,ltr,rtl,separator,fullscreen",
-            theme_advanced_toolbar_location: "top",
-            theme_advanced_toolbar_align: "left",
-            theme_advanced_statusbar_location: "bottom",
-            plugin_insertdate_dateFormat: "%Y-%m-%d",
-            plugin_insertdate_timeFormat: "%H:%M:%S",
-            extended_valid_elements: "hr[class|width|size|noshade]",
-            file_browser_callback: "fileBrowserCallBack",
-            paste_use_dialog: false,
-            theme_advanced_resizing: true,
-            theme_advanced_resize_horizontal: false,
-            theme_advanced_link_targets: "_something=My somthing;_something2=My somthing2;_something3=My somthing3;",
-            media_strict: false,
-            apply_source_formatting: true
-        });
-
-        function fileBrowserCallBack(field_name, url, type, win) {
-            var connector = "../../filemanager/browser.html?Connector=connectors/php/connector.php";
-            var enableAutoTypeSelection = true;
-            var cType;
-            tinymcpuk_field = field_name;
-            tinymcpuk = win;
-            switch (type) {
-                case "image":
-                    cType = "Image";
-                    break;
-                case "flash":
-                    cType = "Flash";
-                    break;
-                case "file":
-                    cType = "File";
-                    break;
-            }
-            if (enableAutoTypeSelection && cType) {
-                connector += "&Type=" + cType;
-            }
-            window.open(connector, "tinymcpuk", "modal,width=600,height=400");
-        }
-    </script>
-    <!-- /TinyMCE -->
+    <link href="kalender/calendar.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="kalender/calendar.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="lokasi_favicon_anda.ico" type="image/x-icon">
 </head>
-<?php
-//ambil data setting
-$hset = mysqli_query($con, "select * from setting");
-while ($rset = mysqli_fetch_array($hset)) {
-    $Nama = $rset["Nama"];
-}
-?>
 
 <body>
     <style>
-        body{
-            position : relative;
-            background-color: 1A181A;
+        body {
+            position: relative;
+            background-color: #1A181A;
+        }
+
+        .nov {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin-left: 10px;
+            margin-top: -13px;
+        }
+
+        .navbar-default {
+            background-color: #181A18;
+            border-color: #080808;
+        }
+
+        .navbar-default .navbar-brand {
+            color: white;
+            display: flex; /* Mengatur elemen ke dalam baris */
+            align-items: center; /* Posisikan elemen secara vertikal */
+        }
+
+        .navbar-default .navbar-brand img {
+            margin-right: 10px; /* Jarak antara logo dan teks */
+        }
+
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: white;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: #080808;
+        }
+
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #080808;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: white;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: white;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover,
+        .navbar-default .navbar-nav>li>a:focus {
+            color: white;
+        }
+
+        .navbar-default .navbar-nav>.open>a,
+        .navbar-default .navbar-nav>.open>a:hover,
+        .navbar-default .navbar-nav>.open>a:focus {
+            background-color: #080808;
+            color: white;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in-from-left {
+            animation: slideInFromLeft 1s ease forwards;
+        }
+
+        .navbar-right {
+            margin-right: 10px;
+        }
+
+        /* Penyesuaian gaya untuk navbar head */
+        .navbar-head {
+            padding: 0px 0;
+        }
+
+        /* Penyesuaian gaya untuk navbar user */
+        .navbar-user {
+            padding-bottom: 20px;
+            text-align: right;
         }
     </style>
+
     <div id="wrapper">
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top " role="navigation" style="margin-bottom: 0">
-        
-        <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-
-    <a class="navbar-brand fixed slide-in-from-left" href="content.php">
-        <img src="images/weneed.png" width="70px">
-        <span class="nov">APLIKASI PENDATAAN USULAN PENELITIAN</span>
-    </a>
-    </div>
-</div>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <!-- Navbar Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="content.php">
+                    <img src="images/weneed.png" width="70px">
+                    <span class="nov">APLIKASI PENDATAAN USULAN PENELITIAN</span>
+                </a>
+            </div>
             <!-- /.navbar-header -->
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#">
-                                <font size=1><i class="fa fa-user fa-fw"></i><?php echo $_SESSION['Email']; ?></font>
-                            </a>
-                        </li>
-                        <li><a href="listsetting.php">
-                                <font size=1><i class="fa fa-gear fa-fw"></i> Settings</font>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
+
+            <!-- Navbar Head -->
+            <div class="navbar-head">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Navbar Toggle -->
+                    <li>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-head -->
+
+            <!-- Navbar User -->
+            <div class="navbar-user">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="#">
+                                    <font size=1><i class="fa fa-user fa-fw"></i><?php echo $_SESSION['Email']; ?></font>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listsetting.php">
+                                    <font size=1><i class="fa fa-gear fa-fw"></i> Settings</font>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+            </div>
+            <!-- /.navbar-user -->
+
             <!-- /.navbar-top-links -->
+        </nav>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+</body>
 
-            <style>
-                .nov{
-                    color:white;
-                    font-family: poppins;
-                    font-size: 20px;
-                    margin-left: 70px;
-                    position : relative;
-                }   
-
-                .navbar-header img {
-                    
-        margin-left: 10px;
-        margin-top : -13px;
-        position : absolute;
-
-    }
-                .navbar-default {
-    background-color:  #181A18 ;
-    border-color: #080808;
-}
-
-.navbar-default .navbar-brand {
-    color: white; 
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: white;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: #080808; 
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #080808;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: white; 
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: white; 
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    background-color: #080808; 
-    color: white; 
-}
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.slide-in-from-left {
-    animation: slideInFromLeft 1s ease forwards;
-}
-
-
-            </style>
+</html>
+```

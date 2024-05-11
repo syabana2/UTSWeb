@@ -31,7 +31,8 @@
         background: 1A181A
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
-        border-radius: 5px
+        border-radius: 5px;
+        margin-top: -30px;
     }
 
     .accordion .link {
