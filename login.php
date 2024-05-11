@@ -89,6 +89,7 @@ while ($rset = mysqli_fetch_array($hset)) {
                 height: auto;
                 width: 150%;
             }
+    
         </style>
 
         <div id="dropDownSelect1"></div>

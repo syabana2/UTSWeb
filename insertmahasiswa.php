@@ -1,5 +1,4 @@
-<br>
-<br>
+
 <?php
 session_start();
 if (!isset($_SESSION["Email"])) {
@@ -12,6 +11,8 @@ include("header.php");
 include("menu.php");
 ?>
 <div id="page-wrapper">
+<br>
+<br>
     <?php
     //cek otoritas
     $q = "SELECT * FROM tw_hak_akses where tabel='mahasiswa' and user = '" . $_SESSION['Email'] . "' and insertData='1'";

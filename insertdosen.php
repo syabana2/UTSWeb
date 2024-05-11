@@ -1,5 +1,4 @@
-<br>
-<Br>
+
 <?php
 session_start();
 if (!isset($_SESSION["Email"])) {
@@ -11,8 +10,10 @@ include("db.php");
 include("header.php");
 include("menu.php");
 ?>
-<div id="page-wrapper">
-	<?php
+<div id="page-wrapper">'
+<br>
+<Br>
+<?php
 	//cek otoritas
 	$q = "SELECT * FROM tw_hak_akses where tabel='dosen' and user = '" . $_SESSION['Email'] . "' and insertData='1'";
 	$r = mysqli_query($con, $q);

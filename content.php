@@ -295,6 +295,10 @@ while ($rowSetting = mysqli_fetch_array($setting)) {
     animation: slideInFromLeft 1s ease forwards;
 }
 
+.body {
+  position: static;
+}
+
 
       </style>
     </div>

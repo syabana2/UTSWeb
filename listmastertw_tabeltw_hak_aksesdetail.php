@@ -9,7 +9,9 @@ include("db.php");
 include("header.php"); 
 include("menu.php"); 
 ?>      
-<div id="page-wrapper">
+<div id="page-wrapper"><br>
+<br>
+
 <?php
 //cek otoritas
 $q = "SELECT * FROM tw_hak_akses where tabel='Manage_User_Access' and user = '". $_SESSION['Email'] ."' and detailData='1'";

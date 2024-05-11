@@ -102,21 +102,28 @@ while ($rset = mysqli_fetch_array($hset)) {
 <body>
     <style>
         body{
+            position : relative;
             background-color: 1A181A;
         }
     </style>
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top " role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand fixed slide-in-from-left" href="content.php"><span class = "nov">APLIKASI PENDATAAN USULAN PENELITIAN</span></a>
-            </div>
+        
+        <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand fixed slide-in-from-left" href="content.php">
+        <img src="images/weneed.png" width="70px">
+        <span class="nov">APLIKASI PENDATAAN USULAN PENELITIAN</span>
+    </a>
+    </div>
+</div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -144,7 +151,17 @@ while ($rset = mysqli_fetch_array($hset)) {
                     color:white;
                     font-family: poppins;
                     font-size: 20px;
+                    margin-left: 70px;
+                    position : relative;
                 }   
+
+                .navbar-header img {
+                    
+        margin-left: 10px;
+        margin-top : -13px;
+        position : absolute;
+
+    }
                 .navbar-default {
     background-color:  #181A18 ;
     border-color: #080808;
@@ -201,4 +218,6 @@ while ($rset = mysqli_fetch_array($hset)) {
 .slide-in-from-left {
     animation: slideInFromLeft 1s ease forwards;
 }
+
+
             </style>

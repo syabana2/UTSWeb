@@ -1,6 +1,3 @@
-<br>
-<br>
-<br>
 
 
 <?php
@@ -37,6 +34,10 @@ include("menu.php");
 echo "<td bgcolor=F5F5F5 valign=top>";
 ?>
 <div id="page-wrapper">
+<br>
+<br>
+<br>
+
 <td valign=top>
 <table class='table table-striped'>
 <tr><td colspan=2><font face=Verdana color=black size=2>Laporan Dosen/Usulan_Penelitian</font></td></tr>

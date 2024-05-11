@@ -24,7 +24,7 @@ include("db.php");
   <table width=100%>
     <thead>
       <tr>
-        <td rowspan="3" width=20% align=center><?php echo "<img src='images/" . $Logo . "' width=100 height=100><br>"; ?></td>
+        <td rowspan="3" width=20% align=center><?php echo "<img src='images/weneed.png' width=200 ><br>"; ?></td>
         <td>
           <font face=verdana size=5><?php echo $Nama; ?></font>
         </td>

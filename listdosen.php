@@ -1,5 +1,3 @@
-<br>
-<br>
 
 <?php
 session_start();
@@ -13,6 +11,9 @@ include("header.php");
 include("menu.php");
 ?>
 <div id="page-wrapper">
+<br>
+<br>
+
 <?php
 //cek otoritas
 $q = "SELECT * FROM tw_hak_akses where tabel='dosen' and user = '". $_SESSION['Email'] ."' and listData='1'";
